@@ -1,0 +1,8 @@
+﻿{
+    "name":  "gsap",
+    "description":  "Skill bundle: gsap-core, gsap-frameworks, gsap-performance, gsap-plugins, gsap-react, gsap-scrolltrigger, gsap-timeline, gsap-utils",
+    "version":  "1.0.0",
+    "author":  {
+                   "name":  "Alberto Martinez"
+               }
+}

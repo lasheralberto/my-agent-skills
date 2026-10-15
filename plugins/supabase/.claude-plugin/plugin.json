@@ -1,0 +1,8 @@
+﻿{
+    "name":  "supabase",
+    "description":  "Skill bundle: supabase, supabase-postgres-best-practices",
+    "version":  "1.0.0",
+    "author":  {
+                   "name":  "Alberto Martinez"
+               }
+}

@@ -1,0 +1,8 @@
+﻿{
+    "name":  "ponytail",
+    "description":  "Forces the laziest solution that actually works: simplest, shortest, most minimal (YAGNI, stdlib first). Levels: lite, full, ultra.",
+    "version":  "1.0.0",
+    "author":  {
+                   "name":  "Alberto Martinez"
+               }
+}

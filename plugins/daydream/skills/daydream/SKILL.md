@@ -1,4 +1,4 @@
----
+﻿---
 name: daydream
 description: Mine an Obsidian vault for non-obvious connections between random note pairs (Sonnet synthesizer + Haiku critic), saving accepted insights to Daydreams/. Use when the user runs /daydream or asks to daydream over their vault.
 ---
@@ -54,4 +54,4 @@ Per run (~50 pairs): approximately $0.40-0.50 via Claude Code usage.
 
 ## Implementation
 
-Follow `instructions.md` in this skill directory (`~/.claude/skills/daydream/`). Prompt templates: `synthesizer-prompt.md`, `critic-prompt.md` in the same directory. On Windows/Git Bash use `stat -c "%Y %n"` instead of macOS `stat -f "%m %N"`.
+Follow `instructions.md` in this skill directory (`${CLAUDE_PLUGIN_ROOT}/skills/daydream/`). Prompt templates: `synthesizer-prompt.md`, `critic-prompt.md` in the same directory. On Windows/Git Bash use `stat -c "%Y %n"` instead of macOS `stat -f "%m %N"`.

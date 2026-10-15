@@ -1,4 +1,4 @@
-# Vault Daydream — Implementation Instructions
+﻿# Vault Daydream â€” Implementation Instructions
 
 You are running the Vault Daydream skill. Follow these steps precisely.
 
@@ -70,7 +70,7 @@ If file doesn't exist, treat as empty: `{"sampled_pairs": []}`.
 
 ## Step 2: Extract Excerpts
 
-For each note found in Step 1 (up to 200 notes — if more, take the 200 most recent):
+For each note found in Step 1 (up to 200 notes â€” if more, take the 200 most recent):
 
 1. **Read the file** using the Read tool
 2. **Strip YAML frontmatter**: Remove everything between the first `---` and the second `---` (inclusive)
@@ -137,7 +137,7 @@ print(json.dumps(result))
 
 Replace `NOTES_JSON_HERE` with the actual JSON array from Step 2. Also incorporate history dedup by adding known pairs to `history_pairs`.
 
-If fewer than 50 pairs generated, that's fine — proceed with whatever was generated.
+If fewer than 50 pairs generated, that's fine â€” proceed with whatever was generated.
 
 ### 3c. Output
 Store the pairs array. Each pair has:
@@ -153,7 +153,7 @@ Store the pairs array. Each pair has:
 ## Step 4: Synthesize Connections (Parallel Task Agents)
 
 ### 4a. Read synthesizer prompt
-Read the file `~/.claude/skills/daydream/synthesizer-prompt.md` to get the prompt template.
+Read the file `${CLAUDE_PLUGIN_ROOT}/skills/daydream/synthesizer-prompt.md` to get the prompt template.
 
 ### 4b. Batch pairs
 Split the pairs into batches of 5. This yields up to 10 batches.
@@ -170,7 +170,7 @@ Task(
 
 For each pair below, find deep non-obvious connections. Return a JSON array of results.
 
-[SYNTHESIZER PROMPT TEMPLATE — filled in for each pair]
+[SYNTHESIZER PROMPT TEMPLATE â€” filled in for each pair]
 
 Pair 1:
 Note A: {title} --- {excerpt} ---
@@ -213,7 +213,7 @@ If a Task agent returns malformed JSON, skip that batch and note the error. Do n
 ## Step 5: Critique and Score (Parallel Task Agents)
 
 ### 5a. Read critic prompt
-Read the file `~/.claude/skills/daydream/critic-prompt.md` to get the prompt template.
+Read the file `${CLAUDE_PLUGIN_ROOT}/skills/daydream/critic-prompt.md` to get the prompt template.
 
 ### 5b. Batch synthesis results
 Split synthesis results into batches of 5 (same pattern as Step 4).
@@ -344,7 +344,7 @@ insights_accepted: {accepted_count}
 ```
 
 ### 6d. Update daily note
-Read `Daily/{TODAY}.md`. If it doesn't exist, create it from template first. Check if a `## Daydream` section already exists — if so, **replace** it entirely (to handle re-runs). If it doesn't exist, append it.
+Read `Daily/{TODAY}.md`. If it doesn't exist, create it from template first. Check if a `## Daydream` section already exists â€” if so, **replace** it entirely (to handle re-runs). If it doesn't exist, append it.
 
 Content:
 ```markdown

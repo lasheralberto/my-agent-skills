@@ -1,0 +1,8 @@
+﻿{
+    "name":  "turbovec-agents",
+    "description":  "Build RAG, semantic memory and tool routing for agents using turbovec as a lightweight local vector index.",
+    "version":  "1.0.0",
+    "author":  {
+                   "name":  "Alberto Martinez"
+               }
+}

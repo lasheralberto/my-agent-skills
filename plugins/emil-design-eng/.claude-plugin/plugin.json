@@ -1,0 +1,8 @@
+﻿{
+    "name":  "emil-design-eng",
+    "description":  "This skill encodes Emil Kowalski\u0027s philosophy on UI polish, component design, animation decisions, and the invisible details that make software feel great.",
+    "version":  "1.0.0",
+    "author":  {
+                   "name":  "Alberto Martinez"
+               }
+}

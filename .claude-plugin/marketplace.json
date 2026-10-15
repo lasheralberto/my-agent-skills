@@ -1,0 +1,119 @@
+﻿{
+    "name":  "me",
+    "owner":  {
+                  "name":  "Alberto Martinez"
+              },
+    "plugins":  [
+                    {
+                        "name":  "archify",
+                        "source":  "./plugins/archify",
+                        "description":  "Create polished, validated architecture, workflow, sequence, data-flow, and lifecycle/state diagrams as explorable standalone HTML with inline SVG, dark/light themes, optional trace motion, and PNG/JPEG/WebP/SVG/WebM export. Accept plain-language requirements or pasted Mermaid flowchart, sequence..."
+                    },
+                    {
+                        "name":  "brag-slim",
+                        "source":  "./plugins/brag-slim",
+                        "description":  "Turn a project directory or a website URL into a short, shareable launch video with music, motion, and share copy. One file, no bundled assets â€” built entirely by the model with the tools already on the machine. Use when someone says \"/brag-slim\", \"let\u0027s /brag about this\", \"brag about a website..."
+                    },
+                    {
+                        "name":  "brandkit",
+                        "source":  "./plugins/brandkit",
+                        "description":  "Premium brand-kit image generation skill for creating high-end brand-guidelines boards, logo systems, identity decks, and visual-world presentations. Trained for minimalist, cinematic, editorial, dark-tech, luxury, cultural, security, gaming, developer-tool, and consumer-app brand systems. Optimi..."
+                    },
+                    {
+                        "name":  "daydream",
+                        "source":  "./plugins/daydream",
+                        "description":  "Mine an Obsidian vault for non-obvious connections between random note pairs (Sonnet synthesizer + Haiku critic), saving accepted insights to Daydreams/. Use when the user runs /daydream or asks to daydream over their vault."
+                    },
+                    {
+                        "name":  "design-taste-frontend",
+                        "source":  "./plugins/design-taste-frontend",
+                        "description":  "Anti-slop frontend skill for landing pages, portfolios, and redesigns. The agent reads the brief, infers the right design direction, and ships interfaces that do not look templated. Real design systems when applicable, audit-first on redesigns, strict pre-flight check."
+                    },
+                    {
+                        "name":  "design-taste-frontend-v1",
+                        "source":  "./plugins/design-taste-frontend-v1",
+                        "description":  "The original v1 taste-skill, preserved for projects depending on its exact behavior. The current default is `design-taste-frontend` (v2 experimental), which is a substantial rewrite. Use this v1 install name only if you need exact backward compatibility."
+                    },
+                    {
+                        "name":  "emil-design-eng",
+                        "source":  "./plugins/emil-design-eng",
+                        "description":  "This skill encodes Emil Kowalski\u0027s philosophy on UI polish, component design, animation decisions, and the invisible details that make software feel great."
+                    },
+                    {
+                        "name":  "full-output-enforcement",
+                        "source":  "./plugins/full-output-enforcement",
+                        "description":  "Overrides default LLM truncation behavior. Enforces complete code generation, bans placeholder patterns, and handles token-limit splits cleanly. Apply to any task requiring exhaustive, unabridged output."
+                    },
+                    {
+                        "name":  "gpt-taste",
+                        "source":  "./plugins/gpt-taste",
+                        "description":  "Elite UX/UI \u0026 Advanced GSAP Motion Engineer. Enforces Python-driven true randomization for layout variance, strict AIDA page structure, wide editorial typography (bans 6-line wraps), gapless bento grids, strict GSAP ScrollTriggers (pinning, stacking, scrubbing), inline micro-images, and massive s..."
+                    },
+                    {
+                        "name":  "gsap",
+                        "source":  "./plugins/gsap",
+                        "description":  "Skill bundle: gsap-core, gsap-frameworks, gsap-performance, gsap-plugins, gsap-react, gsap-scrolltrigger, gsap-timeline, gsap-utils"
+                    },
+                    {
+                        "name":  "high-end-visual-design",
+                        "source":  "./plugins/high-end-visual-design",
+                        "description":  "Teaches the AI to design like a high-end agency. Defines the exact fonts, spacing, shadows, card structures, and animations that make a website feel expensive. Blocks all the common defaults that make AI designs look cheap or generic."
+                    },
+                    {
+                        "name":  "image-to-code",
+                        "source":  "./plugins/image-to-code",
+                        "description":  "Elite website image-to-code skill for Codex. For visually important web tasks, it must first generate the design image(s) itself, deeply analyze them, then implement the website to match them as closely as possible. In Codex, it must prefer large, readable, section-specific images instead of tiny..."
+                    },
+                    {
+                        "name":  "imagegen-frontend-mobile",
+                        "source":  "./plugins/imagegen-frontend-mobile",
+                        "description":  "Elite mobile app image-generation skill for creating premium, app-native screen concepts and flows. Designed for iOS, Android, and cross-platform mobile products. Prioritizes clean hierarchy, comfortably readable text, strong multi-screen consistency, controlled color palettes, non-generic creati..."
+                    },
+                    {
+                        "name":  "imagegen-frontend-web",
+                        "source":  "./plugins/imagegen-frontend-web",
+                        "description":  "Elite frontend image-direction skill for generating premium, conversion-aware website design references. CRITICAL OUTPUT RULE â€” generate ONE separate horizontal image FOR EVERY section. A landing page with 8 sections produces 8 images. Never compress multiple sections into one image. Enforces c..."
+                    },
+                    {
+                        "name":  "industrial-brutalist-ui",
+                        "source":  "./plugins/industrial-brutalist-ui",
+                        "description":  "Raw mechanical interfaces fusing Swiss typographic print with military terminal aesthetics. Rigid grids, extreme type scale contrast, utilitarian color, analog degradation effects. For data-heavy dashboards, portfolios, or editorial sites that need to feel like declassified blueprints."
+                    },
+                    {
+                        "name":  "minimalist-ui",
+                        "source":  "./plugins/minimalist-ui",
+                        "description":  "Clean editorial-style interfaces. Warm monochrome palette, typographic contrast, flat bento grids, muted pastels. No gradients, no heavy shadows."
+                    },
+                    {
+                        "name":  "playwright-skill",
+                        "source":  "./plugins/playwright-skill",
+                        "description":  "Complete browser automation with Playwright. Auto-detects dev servers, writes reusable test scripts, and supports screenshots, responsive checks, UX validation, login flows, link checks, and arbitrary browser automation. Use when the user wants to test a website, automate browser interactions, va..."
+                    },
+                    {
+                        "name":  "ponytail",
+                        "source":  "./plugins/ponytail",
+                        "description":  "Forces the laziest solution that actually works: simplest, shortest, most minimal (YAGNI, stdlib first). Levels: lite, full, ultra."
+                    },
+                    {
+                        "name":  "redesign-existing-projects",
+                        "source":  "./plugins/redesign-existing-projects",
+                        "description":  "Upgrades existing websites and apps to premium quality. Audits current design, identifies generic AI patterns, and applies high-end design standards without breaking functionality. Works with any CSS framework or vanilla CSS."
+                    },
+                    {
+                        "name":  "stitch-design-taste",
+                        "source":  "./plugins/stitch-design-taste",
+                        "description":  "Semantic Design System Skill for Google Stitch. Generates agent-friendly DESIGN.md files that enforce premium, anti-generic UI standards â€” strict typography, calibrated color, asymmetric layouts, perpetual micro-motion, and hardware-accelerated performance."
+                    },
+                    {
+                        "name":  "supabase",
+                        "source":  "./plugins/supabase",
+                        "description":  "Skill bundle: supabase, supabase-postgres-best-practices"
+                    },
+                    {
+                        "name":  "turbovec-agents",
+                        "source":  "./plugins/turbovec-agents",
+                        "description":  "Build RAG, semantic memory and tool routing for agents using turbovec as a lightweight local vector index."
+                    }
+                ],
+    "description":  "Personal Claude Code skills as installable plugins"
+}

@@ -1,4 +1,4 @@
-# Synthesizer Prompt
+﻿# Synthesizer Prompt
 
 Used by Task sub-agents (model: sonnet) to find connections between note pairs.
 

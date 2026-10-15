@@ -1,4 +1,4 @@
-# Critic Prompt
+﻿# Critic Prompt
 
 Used by Task sub-agents (model: haiku) to score and filter synthesized insights.
 

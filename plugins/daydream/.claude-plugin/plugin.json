@@ -1,0 +1,8 @@
+﻿{
+    "name":  "daydream",
+    "description":  "Mine an Obsidian vault for non-obvious connections between random note pairs (Sonnet synthesizer + Haiku critic), saving accepted insights to Daydreams/. Use when the user runs /daydream or asks to daydream over their vault.",
+    "version":  "1.0.0",
+    "author":  {
+                   "name":  "Alberto Martinez"
+               }
+}
