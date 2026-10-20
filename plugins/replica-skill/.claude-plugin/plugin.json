@@ -1,0 +1,11 @@
+{
+    "name":  "replica-skill",
+    "description":  "Eleven skills that clone any app: recon, architecture, design, build, backend, test, parity diff, Entrepreneur (reads user reviews), brand, launch and deploy. By Jake Schincariol, MIT.",
+    "version":  "1.0.0",
+    "author":  {
+                   "name":  "Jake Schincariol",
+                   "url":  "https://opusjake.ai"
+               },
+    "homepage":  "https://github.com/Jakeschincariol/replica-skill",
+    "license":  "MIT"
+}
