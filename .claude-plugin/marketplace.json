@@ -40,6 +40,11 @@
                         "description":  "This skill encodes Emil Kowalski\u0027s philosophy on UI polish, component design, animation decisions, and the invisible details that make software feel great."
                     },
                     {
+                        "name":  "factory-feature-builder",
+                        "source":  "./plugins/factory-feature-builder",
+                        "description":  "Feature factory pipeline: spec-writer (Opus) -> builder (Opus) -> parallel review by security (Opus), UX, UI design and code (Sonnet) -> loop back to builder until clean -> approver (Opus) pushes a new branch and opens a PR, or escalates to need-human."
+                    },
+                    {
                         "name":  "full-output-enforcement",
                         "source":  "./plugins/full-output-enforcement",
                         "description":  "Overrides default LLM truncation behavior. Enforces complete code generation, bans placeholder patterns, and handles token-limit splits cleanly. Apply to any task requiring exhaustive, unabridged output."

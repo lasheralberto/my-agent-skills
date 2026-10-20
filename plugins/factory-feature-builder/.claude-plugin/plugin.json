@@ -1,0 +1,8 @@
+{
+    "name": "factory-feature-builder",
+    "description": "Feature factory pipeline: spec-writer (Opus) -> builder (Opus) -> parallel review by security (Opus), UX, UI design and code (Sonnet) -> loop back to builder until clean -> approver (Opus) pushes a new branch and opens a PR, or escalates to need-human.",
+    "version": "1.0.0",
+    "author": {
+        "name": "Alberto Martinez"
+    }
+}
