@@ -9,4 +9,4 @@ Personal marketplace **me**. Each plugin lives in `plugins/<name>/skills/`.
 
 Bundles: `gsap` (8 skills), `supabase` (2 skills). playwright-skill needs `npm install` in its folder.
 
-`factory-feature-builder` ships a skill plus 7 agents (`plugins/<name>/agents/`): `/factory-feature-builder <feature>` runs spec-writer → builder → parallel security/UX/UI/code review → loop → approver (PR or need-human).
+`factory-feature-builder` ships a skill plus 7 agents (`plugins/<name>/agents/`): `/factory-feature-builder <feature>` runs spec-writer → builder → parallel security/UX/UI/code review → loop → approver (PR or need-human). Config (`/plugin configure factory-feature-builder@me`): `github_repo_url` (empty = never push, local commit only) and `max_iterations` (default 3).

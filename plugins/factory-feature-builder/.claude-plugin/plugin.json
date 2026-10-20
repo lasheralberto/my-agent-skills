@@ -4,5 +4,21 @@
     "version": "1.0.0",
     "author": {
         "name": "Alberto Martinez"
+    },
+    "userConfig": {
+        "github_repo_url": {
+            "type": "string",
+            "title": "GitHub repository URL",
+            "description": "Repo the approver pushes the factory branch to and opens the PR against (e.g. https://github.com/owner/repo). Leave empty to never push: approved work is only committed locally.",
+            "default": ""
+        },
+        "max_iterations": {
+            "type": "number",
+            "title": "Max build/review iterations",
+            "description": "How many builder -> reviewers rounds before the approver decides (escalating if changes are still requested).",
+            "default": 3,
+            "min": 1,
+            "max": 10
+        }
     }
 }

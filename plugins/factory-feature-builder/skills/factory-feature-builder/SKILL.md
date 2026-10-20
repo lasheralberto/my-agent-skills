@@ -37,9 +37,20 @@ Agents (plugin-namespaced `subagent_type`):
 
 If a namespaced agent type is not available (plugin agents not loaded), fall back to `general-purpose` with the same `model` override and paste the corresponding file from this plugin's `agents/` folder as the first part of the prompt.
 
+## Config
+
+Set by the user in the plugin's config dialog (`/plugin configure factory-feature-builder@me`):
+
+- `GITHUB_REPO_URL` = `${user_config.github_repo_url}`
+- `MAX_ITERATIONS` = `${user_config.max_iterations}`
+
+Resolve them at the start of the run:
+- If a value above is empty or still shows the literal `${user_config.…}` placeholder, it is unset. Unset `GITHUB_REPO_URL` → **push disabled**. Unset `MAX_ITERATIONS` → 3.
+- The user may override either one in the request itself ("max 5 iterations", "push to …"). An override applies to that run only.
+- **Push disabled means nothing is pushed anywhere**: not to `origin`, not to any remote, and no PR is opened. Approved work stays committed on the local `factory/<slug>` branch.
+
 ## Settings
 
-- `MAX_ITERATIONS = 3` build→review rounds. The user may override ("max 5 iterations").
 - Workspace: `.factory/<slug>/` at the repo root (`<slug>` = kebab-case of the feature, ≤ 40 chars). Add `.factory/` to `.git/info/exclude` so it never gets committed.
 
 ## Step 0 — Preflight
@@ -48,7 +59,7 @@ If a namespaced agent type is not available (plugin agents not loaded), fall bac
 2. Confirm you are in a git repo. Run `git status --porcelain`. If the tree is dirty, stop and ask the user whether to continue (their uncommitted changes would end up in the PR) — do not stash or discard anything yourself.
 3. Record the base branch (`git rev-parse --abbrev-ref HEAD`) and create the work branch: `git switch -c factory/<slug>` (append `-2`, `-3`… if it exists).
 4. Create `.factory/<slug>/` and write the raw request to `.factory/<slug>/feature.md`.
-5. Tell the user in one line: branch, workspace, max iterations.
+5. Tell the user in one line: branch, workspace, max iterations, and push target (the `GITHUB_REPO_URL`, or "push disabled — local commit only").
 
 ## Step 1 — Spec
 
@@ -87,11 +98,13 @@ Detect a stuck loop: if the same blocker finding reappears in two consecutive it
 
 ## Step 5 — Approver
 
-Dispatch `approver` (foreground) with: `feature.md`, `spec.md`, all `build-*.md`, all `reviews/`, base branch, work branch, iteration count, and whether the loop ended clean or by hitting MAX/stuck.
+Dispatch `approver` (foreground) with: `feature.md`, `spec.md`, all `build-*.md`, all `reviews/`, base branch, work branch, iteration count, whether the loop ended clean or by hitting MAX/stuck, and the resolved `GITHUB_REPO_URL` (or the literal text `PUSH_DISABLED`).
 
 The approver returns exactly one of:
 
-- `APPROVED` — it has committed on `factory/<slug>`, pushed with `-u origin`, and opened a PR against the base branch (`gh pr create`), or, if `gh` is missing/unauthenticated, pushed and returned the compare URL. Report the PR URL to the user.
+- `APPROVED` — it has committed on `factory/<slug>`. Then:
+  - With `GITHUB_REPO_URL`: it pushed the branch to that repo and opened a PR against the base branch (`gh pr create`), or, if `gh` is missing/unauthenticated, returned the compare URL. Report the PR URL to the user.
+  - With `PUSH_DISABLED`: it pushed nothing. Tell the user the work is committed on the local branch, and that they can set the repo URL with `/plugin configure factory-feature-builder@me` for next time.
 - `NEED_HUMAN` — nothing pushed. It wrote `.factory/<slug>/need-human.md` with the reasons and the concrete decisions the user must make. Show the user that summary; leave the branch and working tree as they are.
 
 ## Final report to the user
@@ -101,6 +114,7 @@ Short: feature, iterations used, per-reviewer final verdict, outcome (PR link or
 ## Rules
 
 - Never merge, never push to the base branch, never force-push.
+- Never push to any repo other than `GITHUB_REPO_URL`; with push disabled, never push at all.
 - Never skip the reviewers, even on the last iteration.
 - Do not edit code yourself between stages; route every fix through the builder.
 - Keep your own messages to the user to one line per stage transition.
